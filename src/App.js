@@ -18,11 +18,19 @@ export default function App() {
           Erica
         </a>
         , it's open-sourced on{" "}
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/huxrce/react-weather-project"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
         </a>{" "}
         and hosted on{" "}
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://shecodes-react-weather-app.onrender.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Render
         </a>
       </footer>
