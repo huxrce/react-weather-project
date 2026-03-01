@@ -42,7 +42,7 @@ body {
   color: var(--heading-color);
   font-size: 38px;
   font-weight: 700;
-  margin: 20px 0 0 0;
+  margin: 20px 0 5px;
 }
 
 .Weather ul {
@@ -60,7 +60,7 @@ body {
 
 .Weather .icon {
   position: relative;
-  top: -18px;
+  top: -22px;
 }
 
 .Weather .temperature {
