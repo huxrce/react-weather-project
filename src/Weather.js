@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import FormattedTime from "./FormattedTime";
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -11,8 +11,8 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
-      condition: response.data.condition.description,
-      iconUrl: response.data.condition.icon_url,
+      description: response.data.condition.description,
+      icon: response.data.condition.icon,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
       date: new Date(response.data.time * 1000),
@@ -55,42 +55,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <h1 className="text-capitalize">{weatherData.city}</h1>
-        <ul>
-          <li>
-            <FormattedTime date={weatherData.date} />
-          </li>
-          <li className="text-capitalize">{weatherData.description}</li>
-        </ul>
-        <div className="row mt-3">
-          <div className="col-6">
-            <div className="clearfix d-flex">
-              <img
-                src={weatherData.iconUrl}
-                alt={weatherData.description}
-                className="icon float-left"
-              />
-              <div className="float-left">
-                <span className="temperature">
-                  {Math.round(weatherData.temperature)}
-                </span>
-                <span className="unit">°C</span>
-              </div>
-            </div>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>
-                Humidity:{" "}
-                <span className="weather-details">{weatherData.humidity}%</span>
-              </li>
-              <li>
-                Wind:{" "}
-                <span className="weather-details">{weatherData.wind} km/h</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
