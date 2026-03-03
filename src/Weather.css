@@ -61,10 +61,6 @@ body {
   color: var(--accent-color);
 }
 
-.Weather canvas {
-  margin: 4px 10px 0 0;
-}
-
 .Weather .temperature {
   color: var(--heading-color);
   font-size: 64px;
