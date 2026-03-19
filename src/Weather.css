@@ -80,10 +80,11 @@ body {
   top: -34px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 680px) {
   .Weather .temperature {
     font-size: 54px;
     position: relative;
     top: -7px;
+    margin-left: -5px;
   }
 }
