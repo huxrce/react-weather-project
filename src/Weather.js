@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { FaSearch } from "react-icons/fa";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
@@ -51,8 +52,14 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn submit-btn w-100"
+                className="btn submit-btn d-none d-sm-block"
               />
+              <button
+                onClick={updateCity}
+                className="submit-btn d-block d-sm-none"
+              >
+                <FaSearch />
+              </button>
             </div>
           </div>
         </form>

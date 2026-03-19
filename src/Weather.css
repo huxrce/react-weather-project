@@ -1,6 +1,6 @@
 :root {
   --primary-color: rgb(128, 0, 128);
-  --secondary-color: rgb(252, 246, 254);
+  --secondary-color: rgb(251, 237, 255);
   --heading-color: rgb(39, 33, 66);
   --accent-color: rgb(246, 82, 130);
   --text-color: rgba(39, 33, 66, 0.4);
@@ -30,10 +30,13 @@ body {
 
 .Weather .submit-btn {
   background: var(--primary-color);
+  border: none;
   border-radius: 10px;
   color: white;
   padding: 10px 20px;
+  text-align: center;
   transition: all 100ms ease-in-out;
+  width: 100%;
 }
 
 .Weather .submit-btn:hover {
@@ -75,4 +78,12 @@ body {
   line-height: 1;
   position: relative;
   top: -34px;
+}
+
+@media (max-width: 700px) {
+  .Weather .temperature {
+    font-size: 54px;
+    position: relative;
+    top: -7px;
+  }
 }
